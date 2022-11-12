@@ -54,20 +54,23 @@
         function saveproduct() {
             $('.form-control').removeClass('is-invalid')
             $('.errmsg').remove()
-            // if($('#ad_name').val().length <= 0) {
-            //     $('#ad_name').addClass('is-invalid').after(`<span class="errmsg text-danger">Please insert name</span>`)
-            // }
-            // else if($('#ad_price').val().length <= 0) {
-            //     $('#ad_price').addClass('is-invalid').after(`<span class="errmsg text-danger">Please insert price</span>`)
-            // }
-            // else if($('#ad_des').val().length <= 0) {
-            //     $('#ad_des').addClass('is-invalid').after(`<span class="errmsg text-danger">Please insert description</span>`)
-            // }
-            // else if($('#ad_type').val() == '') {
-            //     $('#ad_type').addClass('is-invalid').after(`<span class="errmsg text-danger">Please select type</span>`)
-            // }
-            if(false) {
-
+            if($('#ad_name').val().length <= 0) {
+                $('#ad_name').addClass('is-invalid').after(`<span class="errmsg text-danger">Please insert name</span>`)
+            }
+            else if($('#ad_price').val().length <= 0) {
+                $('#ad_price').addClass('is-invalid').after(`<span class="errmsg text-danger">Please insert price</span>`)
+            }
+            else if($('#ad_des').val().length <= 0) {
+                $('#ad_des').addClass('is-invalid').after(`<span class="errmsg text-danger">Please insert description</span>`)
+            }
+            else if($('#ad_type').val() == '') {
+                $('#ad_type').addClass('is-invalid').after(`<span class="errmsg text-danger">Please select type</span>`)
+            }
+            else if($('#image').val() == '') {
+                $('#image').addClass('is-invalid').after(`<span class="errmsg text-danger">Please upload image</span>`)
+            }
+            else if($('#rarorzip').val() == '') {
+                $('#rarorzip').addClass('is-invalid').after(`<span class="errmsg text-danger">Please upload file</span>`)
             }
             else {
                 var fd = new FormData();
